@@ -43,10 +43,6 @@
     display: none;
 }
 
-.menu-mobile-button{
-    display: none;
-}
-
 .nav-menu-item{
     list-style: none;
     display: flex;

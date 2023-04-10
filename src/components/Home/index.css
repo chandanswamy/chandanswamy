@@ -1,18 +1,19 @@
-.home-route{
-    margin-top: 42px;
-    
-}
-
-@media screen and (max-width: 767px) {
-    .home-route{
-        margin-top: 22px;
-    }    
-}
-
 .home-content{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    min-height: 90vh;
+}
+
+@media screen and (max-width: 767px) {
+    .home-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 80vh;
+
+    }
 }
 
 .home-wallpaper{
@@ -24,12 +25,7 @@
         width: 90%;
         max-width: 550px;
     } 
-    .home-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    
 }
 
 .self-content{
@@ -37,6 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .greeting-myself{
@@ -45,21 +42,17 @@
     font-size: 32px;
     font-weight: 600;
     text-align: center;    
-    animation-name: slideIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;        
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slide-in 0.5s ease forwards; 
 }
-  
-@keyframes slideIn {
-  0% {
-            transform: translateX(-100%);
-            opacity: 0;
-     }
- 100% {
-            transform: translateX(0);
-            opacity: 1;
-     }
-}
+
+@keyframes slide-in {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
 .content-myself{
     font-family: Calibri;
@@ -68,68 +61,32 @@
     color: #ffffff;
     max-width: 400px;
     text-align: center;
-    overflow: hidden;
-    border-right: 0.15em solid #333;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    animation: print 30s steps(1000, end) forwards;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    opacity: 0; /* Hide the text initially */
+    animation: type 5s steps(50000) forwards;
+    white-space: wrap;
 }
 
-@keyframes print {
-    from {
-      width: 0;
-    }
-    to {
-      width: 1000%;
-    }
-}
+@keyframes type {
+    from { width: 0; opacity: 0; }
+    to { width: 100%; opacity: 1; }
+  }
 
 @media screen and (max-width: 767px) {
     .greeting-myself{
         font-family: Calibri;
         font-size: 24px;
         font-weight: 600;
-        text-align: center;
-        animation-name: slideIn;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;        
+        text-align: center;      
     }
-
-    @keyframes slideIn {
-        0% {
-          transform: translateX(-100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
     
     .content-myself{
         font-family: Calibri;
         font-size: 14px;
         font-weight: 600;
         color: #ffffff;
-        width: 270px;
+        width: 100%;
         text-align: center;
-        overflow: hidden;
-        border-right: 0.15em solid #333;
-        letter-spacing: 0.01em;
-        white-space: nowrap;
-        animation: print 30s steps(1000, end) forwards;
-        margin-top: 0px;
-        margin-bottom: 0px;
     }
-    @keyframes print {
-        from {
-          width: 0%;
-        }
-        to {
-          width: 1000%;
-        }
-    }
+    
     
 }

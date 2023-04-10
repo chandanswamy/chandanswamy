@@ -1,0 +1,78 @@
+.skills-heading{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 32px;
+font-weight: 600;
+color: #ffffff;
+text-align: center;
+}
+
+.skills-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 42px;
+    position: relative;
+}
+
+@media screen and (max-width:767px) {
+    .skills-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 22px;
+    }
+}
+
+.skill-icons-card{
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+    margin-right: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+@media screen and (max-width:767px) {
+    .skill-icons-card{
+        height: 80px;
+        width: 80px;
+        border-radius: 20px;
+        background: #e0e0e0;
+        box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+        margin-right: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.skill-icon{
+    font-size: 80px;
+}
+
+@media screen and (max-width:767px) {
+    .skill-icon{
+        font-size: 36px;
+    }
+    
+}
+
+.skill-icon-link{
+    text-decoration: none;
+    color: #000000;
+}
