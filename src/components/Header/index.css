@@ -1,0 +1,165 @@
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar-desktop{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.profile-photo{
+    height: 60px;
+    width: 60px;
+    border-radius: 80px;
+    margin-right: 16px;
+}
+
+.profile-name{
+    font-family:Arial;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 16px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-desktop-menu{
+    flex: 1;
+    flex-shrink: 1;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.nav-mobile-menu{
+    display: none;
+}
+
+.menu-mobile-button{
+    display: none;
+}
+
+.nav-menu-item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.nav-menu-item:hover{
+    background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-family:Arial;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.span-element{
+    color: #666666;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-link{
+        text-decoration: none;
+        font-family:Arial;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .nav-bar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-bar-desktop{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .profile-photo{
+        height: 40px;
+        width: 40px;
+        border-radius: 80px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    
+    .profile-name{
+        width: 200px;
+        font-family:Arial;
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0px 12px 0px 0px;
+    }
+    
+    .nav-desktop-menu{
+        display: none;
+    }
+
+    .nav-mobile-menu{
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0px;
+    }    
+
+    .nav-menu-item{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .nav-menu-item:hover{
+        background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .nav-link{
+        text-decoration: none;
+        font-family:Arial;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+    .menu-icon{
+        font-size: 24px;
+        color: #ffffff;
+    }
+    .span-text{
+        font-size: 12px;
+        color: #ffffff;
+        font-family: Arial;
+        margin-top: 8px;
+    }
+}
