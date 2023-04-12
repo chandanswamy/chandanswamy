@@ -5,6 +5,9 @@ import './index.css'
 class Contact extends Component{
   state = {isFormSubmitted: false, name: '', email: '', textarea: '', showNameError: false, showEmailError: false, showTextAreaError: false}
 
+  sendEmail = (event) => {
+    event.preventDefault()
+  }
 
   onChangeName = (event) => {
     this.setState({name: event.target.value})

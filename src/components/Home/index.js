@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import {React} from 'react'
 import Skills from '../Skills'
 import './index.css'
@@ -13,6 +14,9 @@ const Home = () => {
             <div className='self-content'>
                 <h1 className='greeting-myself'>Hi, I'm Chandan Swamy Ganuga.</h1>
                 <p className='content-myself'>An aspiring full stack developer on a mission to turn innovative ideas into digital realities. With a passion for problem-solving and an eye for design, I approach each project with a unique perspective, combining technical expertise with creative flair to deliver top-notch results.</p>
+                <p className='resume'>
+                  <Link to="./ChandanSwamyGanuga_Resume.pdf" target="_blank" className='resume-link'>Download My Resume</Link>
+                </p>
             </div>
         </div>
         <Skills />

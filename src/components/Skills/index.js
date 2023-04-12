@@ -17,7 +17,7 @@ import './index.css'
 const Skills = () => {
   return (
     <div>
-        <h1 className='skills-heading'>-----Skills and Certifications-----</h1>
+        <h1 className='skills-heading'>Skills and Certifications</h1>
     <div className='skills-section'>
         <Link className='skill-icon-link' to="./PEVHLMTRXV.pdf" target='_blank'>
         <div className='skill-icons-card'>

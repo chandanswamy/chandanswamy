@@ -6,6 +6,17 @@ color: #ffffff;
 text-align: center;
 }
 
+@media screen and (max-width:767px) {
+    .skills-heading{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+        text-align: center;
+        }
+}
+
+
 .skills-section{
     display: flex;
     flex-wrap: wrap;
