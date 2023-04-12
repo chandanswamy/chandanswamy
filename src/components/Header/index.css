@@ -47,13 +47,22 @@
     list-style: none;
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 6px;
+    border: 3px solid;
+    border-radius: 2px;
+    -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+    var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .2s, -webkit-mask-position .2s .2s;
 }
 
 .nav-menu-item:hover{
-    background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
-    padding: 12px;
-    border-radius: 6px;
+    --_i: 100%;
+  color: #ffffff;
+  transition: 0.2s, -webkit-mask-size .2s .2s;
 }
 
 .nav-link{

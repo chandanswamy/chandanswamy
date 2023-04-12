@@ -35,12 +35,12 @@ text-align: center;
     align-items: center;
     justify-content: space-evenly;
     text-transform: uppercase;
-    animation: flip 2s infinite;
+    animation: flip 3s infinite;
     animation-delay: calc(.2s * var(--i))
 }
 
 @keyframes flip {
-    0%,80% {
+    0%,70% {
       transform: rotateY(360deg) 
     }
   }
@@ -60,19 +60,25 @@ text-align: center;
     }
 }
 
+.skill-icons-card:hover{
+    border: 2px solid #000000;
+}
 
 .skill-icon{
     font-size: 80px;
+    filter: drop-shadow(0 0 30px crimson);
 }
 
 @media screen and (max-width:767px) {
     .skill-icon{
         font-size: 36px;
+        filter: drop-shadow(0 0 30px crimson);
+
     }
     
 }
 
 .skill-icon-link{
     text-decoration: none;
-    color: #000000;
+    color: black;
 }

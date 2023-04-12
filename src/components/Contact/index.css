@@ -21,12 +21,13 @@
     font-family:Arial;
     margin-top: 16px;
     margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slide-up 0.5s ease-in-out forwards;
   }
 
-  .form-title:hover{
-    background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
-    padding: 12px;
-    border-radius: 6px;
+  @keyframes slide-up {
+    to{ opacity: 1; transform: translate(0);}
   }
   
   @media screen and (max-width: 767px) {
@@ -44,6 +45,12 @@
     padding: 16px 32px 16px 32px;
     border-radius: 16px;
     min-height: 310px;
+    transform: translateY(-50px);
+    animation: slide-down 0.5s ease-in-out forwards;
+  }
+
+  @keyframes slide-down {
+    to{ opacity: 1; transform: translate(0);}
   }
   
   @media screen and (min-width: 768px) {
@@ -75,7 +82,7 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
-    color: #475569;
+    color: #ffffffff;
   }
   
   .name-input-field {
@@ -110,8 +117,8 @@
   
   .submit-button {
     font-family: Arial;
-    height: 42px;
-    width: 80px;
+    height: 52px;
+    width: 150px;
     font-size: 16px;
     color: #ffffff;
     margin-top: 22px;
@@ -121,7 +128,23 @@
     border: none;
     cursor: pointer;
     outline: none;
+    border: 4px solid;
+    border-radius: 2px;
+    -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .2s, -webkit-mask-position .2s .2s;
   }
+
+  .submit-button:hover{
+    --_i: 100%;
+    border-image: repeating-linear-gradient(135deg, #ffffff 0 10px) 5;
+    background-color: green;
+  transition: 0.2s, -webkit-mask-size .2s .2s;
+}
   
   @media screen and (max-width: 768px) {
     .submit-button {

@@ -17,7 +17,18 @@
 }
 
 .home-wallpaper{
-    width: 40%;
+    width: 40%; 
+    opacity: 0;
+    animation-name: home-image;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes home-image {
+    to { opacity: 1; transform: rotateZ(360deg);}
 }
 
 @media screen and (max-width: 767px) {
@@ -43,8 +54,8 @@
     font-weight: 600;
     text-align: center;    
     opacity: 0;
-    transform: translateX(-50px);
-    animation: slide-in 0.5s ease forwards; 
+    transform: translateX(-150px);
+    animation: slide-in 2s ease forwards; 
 }
 
 @keyframes slide-in {
@@ -61,14 +72,12 @@
     color: #ffffff;
     max-width: 400px;
     text-align: center;
-    opacity: 0; /* Hide the text initially */
-    animation: type 5s steps(50000) forwards;
-    white-space: wrap;
+    transform: translateY(150px);
+    animation: slide-out 2s ease-in-out forwards;
 }
 
-@keyframes type {
-    from { width: 0; opacity: 0; }
-    to { width: 100%; opacity: 1; }
+@keyframes slide-out {
+    to {transform: translateY(0);}
   }
 
 @media screen and (max-width: 767px) {
