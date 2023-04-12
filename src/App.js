@@ -4,6 +4,9 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
 import Header from "./components/Header";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+
 import './App.css'
 
 const wallpaperColors = ['original','grey', 'oceanview', 'fire']
@@ -21,6 +24,8 @@ const App = () => (
         <Route exact path="/about" element={<About/>} />
         <Route exact path="/contact" element={<Contact/>}  />
         <Route exact path="/projects" element={<Projects/>}  />
+        <Route exact path="/about/education" element={<Education />} />
+        <Route exact path="/about/experience" element={<Experience />} />
       </Routes>
     </div>
   </div>
