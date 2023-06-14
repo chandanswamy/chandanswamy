@@ -1,0 +1,9 @@
+@media screen and (max-width: 767px) {
+    .routes-navbar{
+        margin: 0px 16px 24px 16px;
+        height: 44px;
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+    }
+}

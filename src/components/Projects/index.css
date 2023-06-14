@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+    .project-section{
+        margin: 0px 16px 24px 16px;
+    }
+    .react-loader-spinner-container{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

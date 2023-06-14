@@ -1,27 +1,66 @@
-import {Link} from 'react-router-dom'
-import {React} from 'react'
-import Skills from '../Skills'
+import React, { Component } from 'react'
+import Typed from 'typed.js'
+
 import './index.css'
+import { Link } from 'react-router-dom';
+import Skills from '../Skills';
+import RoutesNavbar from '../RoutesNavbar'
 
+export class Home extends Component {
 
-const Home = () => {
-  return (
-    <div className='home-route'>        
-        <div className='home-content'>
-            <img src="/homepage.png" 
-            alt="home wallpaper"
-            className='home-wallpaper' />
-            <div className='self-content'>
-                <h1 className='greeting-myself'>Hi, I'm Chandan Swamy Ganuga.</h1>
-                <p className='content-myself'>An aspiring full stack developer on a mission to turn innovative ideas into digital realities. With a passion for problem-solving and an eye for design, I approach each project with a unique perspective, combining technical expertise with creative flair to deliver top-notch results.</p>
-                <p className='resume'>
-                  <Link to="./ChandanSwamyGanuga_Resume.pdf" target="_blank" className='resume-link'>Download My Resume</Link>
+    constructor(props) {
+    super(props);
+    this.el = React.createRef();
+    this.typed = null;
+  }
+
+  componentDidMount() {
+    this.typed = new Typed(this.el.current, {
+      strings: ['FRONTEND DEVELOPER', 'BACKEND DEVELOPER', 'FULLSTACK DEVELOPER'],
+      typeSpeed: 100,
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.typed) {
+      this.typed.destroy();
+    }
+  }
+
+  render() {
+    return (
+      <div className='home-route'>
+        <div className='profile-section'>
+            <div className='profile-section-sub-one'>
+                <img src="chandanswamy.png" alt='profile' className='profile-image' />
+                <div>
+                <h3 className='profile-intro'>Hi, I'm an Aspiring<br></br><span className='profile-intro-span' ref={this.el}> </span></h3>
+                </div>
+            </div>
+            <div className='profile-section-sub-two'>
+                <p className='profile-bio'>As a passionate fresher in Web Development,
+                    I excel in Frontend and Backend Technologies.
+                    Eager to contribute and grow with hands-on experience.
                 </p>
             </div>
         </div>
+        <div className='resume-portfolio-section'>
+            <Link to="ChandanSwamyGanuga_Resume.pdf" target='_blank' className='resume-portfolio-link'>
+                <button className='resume-portfolio-button' type='button' >
+                    Resume
+                </button>
+            </Link>
+            <Link to="ChandanSwamyGanuga_Resume.pdf" target='_blank' className='resume-portfolio-link'>
+                <button className='resume-portfolio-button' type='button' >
+                    Share Profile
+                </button>
+            </Link>
+        </div>
         <Skills />
-    </div>
-  )
+        <RoutesNavbar />
+      </div>
+    )
+  }
 }
 
 export default Home

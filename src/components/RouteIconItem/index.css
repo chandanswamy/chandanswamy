@@ -1,0 +1,25 @@
+@media screen and (max-width: 767px) {
+    .route-navbar-button{
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .route-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        border-top: 1px solid #737373;
+        border-bottom: 1px solid #737373;
+    }
+
+    .route-navbar-icon{
+        font-size: 28px;
+        color: #8d8d8d;
+    }
+
+    .active-tab{
+        color: #fa0505;
+        font-weight: 600;
+    }
+}

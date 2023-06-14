@@ -1,129 +1,46 @@
-.skill-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skills-heading{
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 32px;
-font-weight: 600;
-color: #ffffff;
-text-align: center;
-}
-
-.skill-image-container{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-@media screen and (max-width:767px) {
-    .skills-heading{
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-        color: #ffffff;
-        text-align: center;
-        }
-}
-
-
-.skills-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 42px;
-    position: relative;
-}
-
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .skills-section{
+        margin: 0px 16px 24px 16px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 22px;
+        flex-direction: row;
+        overflow-x:scroll
     }
-}
-
-.skill-icons-card{
-    height: 120px;
-    width: 120px;
-    border-radius: 20px;
-    background: #e0e0e0;
-    box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
-    margin-right: 12px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-transform: uppercase;
-    animation: flip-card 3s infinite;
-    animation-delay: calc(.2s * var(--i))
-}
-
-@keyframes flip-card {
-    0%,70% {
-      transform: rotateY(360deg) 
-    }
-  }
-
-@media screen and (max-width:767px) {
-    .skill-icons-card{
-        height: 80px;
-        width: 80px;
-        border-radius: 20px;
-        background: #e0e0e0;
-        box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
-        margin-right: 12px;
-        margin-bottom: 12px;
+    .each-skill-card{
+        height: 95px;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-right: 4px;
+        margin-left: 4px;
         display: flex;
+        flex-direction: column;
         align-items: center;
+    }
+    .skill-icon-link{
+        text-decoration: none;
+        background-color: #efefef;
+        color: #262626;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        height: 65px;
+        width: 65px;
+        border: 1.5px dashed #262626;
+        border-radius: 50px;
+        animation: spin 2s linear forwards;
     }
-}
 
-.skill-icons-card:hover{
-    border: 2px solid #000000;
-}
-
-.skill-icon{
-    font-size: 80px;
-    filter: drop-shadow(0 0 30px crimson);
-}
-
-@media screen and (max-width:767px) {
+    @keyframes spin { 
+        100% { 
+          transform: rotateZ(360deg);
+        }
+      }
     .skill-icon{
-        font-size: 36px;
-        filter: drop-shadow(0 0 30px crimson);
-
+        font-size: 45px;
+        position: static;
     }
-    
-}
-
-.skill-icon-link{
-    text-decoration: none;
-    color: black;
-}
-
-.skill-image{
-    width: 100%;
-    max-width: 350px;
-    
-}
-
-.image-two{
-    display: none;
-}
-
-@media screen and (min-width: 768px) {
-    .skill-image{
-        width: 350px;
+    .skill-icon-desc{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        margin: 1px;
     }
-    .image-two{
-        display: block;
-    }
-    
 }
