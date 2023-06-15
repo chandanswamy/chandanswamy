@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px) {
-    .nav-bar-medium{
+    .nav-bar-small{
         height: 45px;
         padding-left: 16px;
         padding-right: 16px;
@@ -43,3 +43,6 @@
         padding: 8px;
     }
 } 
+
+@media screen and (min-width: 767px) and (max-width: 1263px) {
+}

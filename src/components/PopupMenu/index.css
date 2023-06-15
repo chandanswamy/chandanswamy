@@ -13,4 +13,8 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
+
+    .image-container{
+        width: 56px;
+    }
 }

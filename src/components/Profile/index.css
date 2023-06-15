@@ -1,0 +1,73 @@
+@media screen and (max-width: 767px) {
+
+    .profile-section{
+        margin: 16px 16px 24px 16px;
+    }
+
+    .profile-section-sub-one{        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .profile-image{
+        height: 77px;
+        width: 77px;
+        border-radius: 50px;
+    }
+    .profile-intro{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .profile-intro-span{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #fa0505;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+    }
+    .profile-bio{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight:500;
+        letter-spacing: -1px;
+    }
+    
+    
+    .resume-portfolio-section{
+        margin: 0px 16px 24px 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .resume-portfolio-link{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-right: 4px;
+    }
+
+    .resume-portfolio-button{
+        color: #1e160c;
+        border: none;
+        height: 32px;        
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        height: 32px;
+        background-color: #efefef;
+        border-radius: 8px;
+        padding: 0px;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1263px) {
+    
+}

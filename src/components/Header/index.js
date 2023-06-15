@@ -8,15 +8,17 @@ import './index.css'
 const Header = () => {
 
   return (
-    <nav className='nav-bar-medium'>
+    <>
+    <nav className='nav-bar-small'>
         <div className='nav-bar-sub-one'>
             <CgLock className='nav-bar-icon' />
-            <Link to="/" className='profile-name-link'>
+            <Link to="/profile" className='profile-name-link'>
               <h4 className='nav-bar-profile-name'>_chandanswamy_</h4>
             </Link>
         </div>
         <PopupMenu />
     </nav>
+    </>
   )
 }
 
