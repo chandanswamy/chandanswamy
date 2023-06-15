@@ -1,53 +1,9 @@
 import React, { Component } from 'react'
+import { RotatingLines } from 'react-loader-spinner'
 
-import ProjectCard from '.'
+import ProjectCard from '../ProjectCard'
 
 import './index.css'
-
-const initalProjectsList = [
-{
-"project_id": 1,
-"project_title": "Coin Toss Game",
-"project_code": "https://github.com/chandanswamy/simple-coin-toss",
-"project_demo": "https://cscointossgame.ccbp.tech/"
-},
-{
-"project_id": 2,
-"project_title": "Comments App",
-"project_code": "https://github.com/chandanswamy/comments-app",
-"project_demo": "https://commentsappcs.ccbp.tech/"
-},
-{
-"project_id": 3,
-"project_title": "Appointment App",
-"project_code": "https://github.com/chandanswamy/appointments-app",
-"project_demo": "https://apptmate.ccbp.tech/"
-},
-{
-"project_id": 4,
-"project_title": "Password Manager",
-"project_code": "https://github.com/chandanswamy/PasswordManager",
-"project_demo": "https://passwordcs.ccbp.tech/"
-},
-{
-"project_id": 5,
-"project_title": "Money Manager App",
-"project_code": "https://github.com/chandanswamy/money-manager",
-"project_demo": "https://moneymanagercs.ccbp.tech/"
-},
-{
-"project_id": 6,
-"project_title": "Emoji Game",
-"project_code": "https://github.com/chandanswamy/emojigame",
-"project_demo": "https://emojigamecs.ccbp.tech/"
-},
-{
-"project_id": 7,
-"project_title": "IPL Dashboard",
-"project_code": "https://github.com/chandanswamy/ipl-dashboard",
-"project_demo": "https://iplcricinfocs.ccbp.tech/"
-}
-]
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -56,20 +12,90 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 
-class Projects extends Component {
-  state = {apiStatus: apiStatusConstants.initial, projectsList: initalProjectsList}
+export class Projects extends Component {
+  state = {apiStatus: apiStatusConstants.initial, projectsList: []}
 
-  renderProjectsView = () => {
-    const {projectsList} = this.state
-    
+  componentDidMount(){
+    this.getProjects()
+  }
+
+  getProjects = async() => {
+    this.setState({
+      apiStatus: apiStatusConstants.inProgress,
+    })
+
+    try {
+      const apiUrl = "https://gcs-deploy-node.onrender.com/projects"
+    const options = {
+      method: 'GET'
+    }
+    const response = await fetch(apiUrl, options)
+    if (response.ok) {
+      const fetchedData = await response.json()
+      const updatedData = fetchedData.map(project => ({
+        projectId: project.project_id,
+        projectTitle: project.project_title,
+        projectCode: project.project_code,
+        projectDemo: project.project_demo
+      }))
+      this.setState({projectsList: updatedData, apiStatus: apiStatusConstants.success})
+    } else {
+      throw new Error('Failed to fetch projects');
+    }
+      
+    } catch (error) {
+      console.error(error);
+    this.setState({ apiStatus: apiStatusConstants.failure });
+    }    
+  }
+
+  renderLoadingView = () => (
+    <div className='react-loader-spinner-container'>
+      <RotatingLines
+      strokeColor="grey"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="56"
+      visible={true}
+    />
+    </div>
+  )
+
+  renderFailureView = () => (
+    <div className="error-view">
+      <p>Failed to fetch projects. Please try again later.</p>
+    </div>
+  );
+
+  renderSuccessView = () => {
+    const {projectsList} = this.state    
     return(
-      <ul>
+      <ul className='project-list'>
         {projectsList.map(eachProject => (
           <ProjectCard key={eachProject.projectId} projectDetails={eachProject} />
         ))}
       </ul>
     )
   }
+
+  
+  renderProjectsView = () => {
+    const { apiStatus } = this.state;
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderSuccessView();
+        
+      case apiStatusConstants.failure:
+        return this.renderFailureView();
+        
+      case apiStatusConstants.inProgress:
+        return this.renderLoadingView();
+        
+      default:
+        return null;
+        
+    }
+  };
 
   render() {
     return (

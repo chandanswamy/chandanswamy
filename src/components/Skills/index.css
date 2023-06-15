@@ -3,7 +3,9 @@
         margin: 0px 16px 24px 16px;
         display: flex;
         flex-direction: row;
-        overflow-x:scroll
+        overflow-x:scroll;
+        background-color: #ffffff;
+        
     }
     .each-skill-card{
         height: 95px;

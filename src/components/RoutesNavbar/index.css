@@ -5,5 +5,9 @@
         display: flex;
         flex-direction: row;
         padding: 0px;
+        position: sticky;
+        top: 44px;
+        z-index: 9999;
+        background-color: #ffffff;
     }
 }

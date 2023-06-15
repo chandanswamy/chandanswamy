@@ -11,6 +11,8 @@
         background-color: #ffffff;
         position: sticky;
         top: 0;
+        width: 100%;
+        z-index: 9999;
     }
     .nav-bar-sub-one{
         display: flex;
