@@ -5,6 +5,7 @@ import './index.css'
 import { Link } from 'react-router-dom';
 import Skills from '../Skills';
 import RoutesNavbar from '../RoutesNavbar'
+import ShareProfile from '../ShareProfile';
 
 export class Home extends Component {
 
@@ -50,11 +51,9 @@ export class Home extends Component {
                     Resume
                 </button>
             </Link>
-            <Link to="ChandanSwamyGanuga_Resume.pdf" target='_blank' className='resume-portfolio-link'>
-                <button className='resume-portfolio-button' type='button' >
-                    Share Profile
-                </button>
-            </Link>
+            <div className='resume-portfolio-link'>
+              <ShareProfile />
+            </div>
         </div>
         <Skills />
         <RoutesNavbar />

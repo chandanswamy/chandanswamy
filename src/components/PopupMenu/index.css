@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+    
+    .nav-bar-menu-button{
+        height: 40px;
+        width: 40px;
+        color: #000000;
+        background-color: transparent;
+        border: none;
+        padding: 8px;
+    }
+
+    .swipeable-drawer{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}

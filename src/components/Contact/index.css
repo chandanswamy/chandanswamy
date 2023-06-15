@@ -1,0 +1,78 @@
+@media screen and (max-width: 767px) {
+    .contact-section{
+        margin: 0px 16px 24px 16px;
+    }
+
+    .contact-me{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        color: #0f0f0f;
+        animation: slide-down 1s forwards;
+    }
+
+    @keyframes slide-down {
+        from {
+            transform: translateY(+10px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    #contact-form{
+        display: flex;
+        flex-direction: column;
+        animation: slide-up 1s forwards;
+    }
+
+    @keyframes slide-up {
+        from {
+            transform: translateY(-10px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        min-height: 70px;
+        margin-bottom: 8px;
+    }
+
+    .form-control{
+        width: 100%;
+        max-width: 300px;
+        border-radius: 4px;
+        border: .1px solid #737373;
+        padding-left: 16px;
+        font-size: 16px;   
+    }
+
+    .form-control:focus{
+        outline: none;
+    }
+
+    .text{
+        height: 36px;
+    }
+
+    .form-label{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .submit-button{
+        background: #8BC34A;
+        color: #fefefe;
+        padding: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 150px;
+        border: 0;
+        font-size: 20px;
+    }
+}

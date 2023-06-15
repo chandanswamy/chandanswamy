@@ -21,7 +21,7 @@ const ProjectCard = (props) => {
                 </button>
             </Link>
             <Link to={`${projectCode}`} className='project-link'>
-                <button type='button' className='project-button'>
+                <button type='button' className='project-button code'>
                     <GrCode className='project-icon' />
                     <p className='project-button-tag'>Code</p>
                 </button>

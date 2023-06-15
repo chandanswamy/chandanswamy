@@ -22,7 +22,6 @@
         text-decoration: none;
     }
 
-
     .nav-bar-profile-name{
         margin: 0px;
         font-size: 18px;
@@ -30,6 +29,10 @@
         margin-left: 4px;
         margin-right: 4px;
         color: #000000;
+    }   
+
+    .nav-bar-icon{
+        font-size: 22px;
     }
 
     .nav-bar-menu-button{
@@ -38,9 +41,5 @@
         background-color: transparent;
         border: none;
         padding: 8px;
-    }
-
-    .nav-bar-icon{
-        font-size: 22px;
     }
 } 
