@@ -11,7 +11,27 @@
     .project-list{
         padding: 0px;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .projects-heading{
+        font: 22px exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+        color: #000;
+        letter-spacing: 1.5px;
+        font-weight: bolder;
+        margin: 0px;
+        animation: slide-down 1s forwards;
+    }
+
+    @keyframes slide-down {
+        from {
+            transform: translateY(-30px);
+        }
+        to {
+            transform: translateY(0);
+        }
     }
 }

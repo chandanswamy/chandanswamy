@@ -1,21 +1,19 @@
 @media screen and (max-width: 767px) {
     .project-card{
         list-style: none;
-        width: 80%;
-        max-width: 250px;
+        width: 90%;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        margin: 16px;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        align-items: flex-start;
+        margin: 12px 8px 12px 8px;
+        padding: 16px 24px 16px 24px;
         background: rgba( 255, 255, 255, 0.15 );
         box-shadow: 0 8px 14px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
         -webkit-backdrop-filter: blur( 4px );
         border-radius: 10px;
-        animation: fadeIn 1s forwards;
+        animation: fadeIn 1.5s forwards;
         opacity: 0;
     }
 
@@ -29,13 +27,31 @@
     }
 
     .project-title-container{
-        margin-bottom: 42px;
+        margin-bottom: 12px;
     }
 
     .project-title{
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
-        font-size: 18px;
+        font-size: 22px;
         margin: 0px;
+    }
+
+    .project-description{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        margin: 12px 0px 0px 0px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-concepts, .project-skills{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 12px 0px 12px 0px;
     }
 
     .projects-button-container{
@@ -43,6 +59,10 @@
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
+    }
+
+    .project-details-container{
+      margin: 0px 0px 8px 0px;
     }
 
     .project-link{

@@ -65,7 +65,7 @@ const Skills = () => {
     <div className='skills-section'>
       {skillsList.map((skill, index) => (
         <div className='each-skill-card' key={index}>
-          <Link to={skill.linkItem} target='_blank' className='skill-icon-link'>
+          <Link to={`/${skill.linkItem}`} target='_parent' className='skill-icon-link'>
             {skill.iconItem}
           </Link>
           <p className='skill-icon-desc'>{skill.skillName}</p>

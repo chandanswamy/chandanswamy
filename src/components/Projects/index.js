@@ -36,7 +36,11 @@ export class Projects extends Component {
         projectId: project.project_id,
         projectTitle: project.project_title,
         projectCode: project.project_code,
-        projectDemo: project.project_demo
+        projectDemo: project.project_demo,
+        projectDomain: project.project_domain,
+        projectDescription: project.project_description,
+        skills: project.skills,
+        concept: project.concept
       }))
       this.setState({projectsList: updatedData, apiStatus: apiStatusConstants.success})
     } else {
@@ -70,11 +74,14 @@ export class Projects extends Component {
   renderSuccessView = () => {
     const {projectsList} = this.state    
     return(
+      <>
+      <h4 className='projects-heading'>Projects</h4>
       <ul className='project-list'>
         {projectsList.map(eachProject => (
           <ProjectCard key={eachProject.projectId} projectDetails={eachProject} />
         ))}
       </ul>
+      </>
     )
   }
 
