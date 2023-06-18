@@ -42,7 +42,7 @@ const listData = [
   {
     text: 'Login or Sign-Up',
     iconName: <LoginIcon />,
-    linkPath: '/login'
+    linkPath: '/'
   },
   {
     text: 'Dark Theme',
@@ -99,25 +99,26 @@ export default function SwipeableTemporaryDrawer() {
             </ListItemButton>
           </ListItem>
         ))}
-</List>
-
-
+      </List>
     </Box>
   );
 
+  const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+  const anchor = isSmallScreen ? 'bottom' : 'right';
+
   return (
     <div>
-      <React.Fragment key="bottom">
-        <Button sx={styles.button} onClick={toggleDrawer('bottom', true)} className='nav-bar-menu-button'>
+      <React.Fragment key={anchor} >
+        <Button sx={styles.button} onClick={toggleDrawer(anchor, true)} className='nav-bar-menu-button'>
           <FiMenu className='nav-bar-icon'/>
         </Button>
         <SwipeableDrawer
-          anchor="bottom"
-          open={state.bottom}
-          onClose={toggleDrawer('bottom', false)}
-          onOpen={toggleDrawer('bottom', true)}
+          anchor={anchor}
+          open={state[anchor]}
+          onClose={toggleDrawer(anchor, false)}
+          onOpen={toggleDrawer(anchor, true)}
         >
-          {list('bottom')}
+          {list(anchor)}
         </SwipeableDrawer>
       </React.Fragment>
     </div>

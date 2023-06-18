@@ -42,7 +42,7 @@
         margin: 12px 0px 0px 0px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -57,7 +57,7 @@
     .projects-button-container{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
     }
 
@@ -75,7 +75,7 @@
         max-width: 112px;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         background: #4CAF50;
         color: snow;
@@ -128,8 +128,9 @@
     }
 
     .project-icon{
-        font-size: 15px;
-        color: #000000;
+        font-size: 18px;
+        color: snow;
+        font-weight: bolder;
 
     }
 }
